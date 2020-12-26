@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - Trap
+  - Particle
   - 
   - 
   - 
@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 675866001
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2993082805
+    locked: 0
+  - name: decoration
+    uniqueID: 1710647023
+    locked: 0
+  - name: Lava
+    uniqueID: 1227387781
+    locked: 0
+  - name: player
+    uniqueID: 3086342637
+    locked: 0
+  - name: eye
+    uniqueID: 1985674261
     locked: 0
