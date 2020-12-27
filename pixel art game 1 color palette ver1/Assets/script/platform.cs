@@ -6,14 +6,16 @@ public class platform : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool positionTouch;
-    private int facingDirection;
-    private float StartPositionMoving;
+
+
 
     [Header("Platform Object")]
     public GameObject activePlatform, nonActivePlatform;
 
     [Header("moving Attribute")]
     public Vector2 PlatformSpeed;
+    private Vector2 StartPositionMoving;
+    private Vector2 facingDirection;
     public float DistanceMove = 10f;
 
 
@@ -23,8 +25,8 @@ public class platform : MonoBehaviour
         activePlatform.SetActive(true);
         nonActivePlatform.SetActive(false);
         positionTouch = false;
-        facingDirection = 1;
-        StartPositionMoving = transform.position.x;
+        facingDirection = new Vector2(1,1);
+        StartPositionMoving = transform.position;
     }
 
     public void FixedUpdate() {
@@ -54,12 +56,18 @@ public class platform : MonoBehaviour
     }
 
     private void movingPlatform(){
-    transform.position += new Vector3(PlatformSpeed.x*facingDirection, PlatformSpeed.y,0);
+    transform.position += new Vector3(PlatformSpeed.x*facingDirection.x, PlatformSpeed.y*facingDirection.y,0);
 
-        if (Mathf.Abs(transform.position.x - StartPositionMoving) > DistanceMove){
+        if (Mathf.Abs(transform.position.x - StartPositionMoving.x) > DistanceMove){
             facingDirection *= -1;
-            StartPositionMoving = transform.position.x;
+            StartPositionMoving.x = transform.position.x;
         }
+        
+        if (Mathf.Abs(transform.position.y - StartPositionMoving.y) > DistanceMove){
+            facingDirection *= -1;
+            StartPositionMoving.y = transform.position.y;
+        }
+        
     }
 
 

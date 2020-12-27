@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3680769141395193004}
   - component: {fileID: 3680769141395193005}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3680769141471240700}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 3680769141685131848}
   - component: {fileID: 3680769141685131854}
   - component: {fileID: 3680769141685131855}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}

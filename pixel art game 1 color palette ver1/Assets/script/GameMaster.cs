@@ -7,11 +7,11 @@ public class GameMaster : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject PausePanel;
-    public GameObject PauseButton;
+    public GameObject PlayingPanel;
 
     private void Start() {
-        PausePanel.SetActive(true);
-        PauseButton.SetActive(false);
+        PausePanel.SetActive(false);
+        PlayingPanel.SetActive(true);
     }
     public void Update()
     {
@@ -34,7 +34,7 @@ public class GameMaster : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
         PausePanel.SetActive(true);
-        PauseButton.SetActive(false);
+        PlayingPanel.SetActive(false);
     }
 
     public void Resume()
@@ -42,7 +42,7 @@ public class GameMaster : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         PausePanel.SetActive(false);
-        PauseButton.SetActive(true);
+        PlayingPanel.SetActive(true);
     }
 
 
@@ -57,9 +57,10 @@ public class GameMaster : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
+    
 
     public void gotoMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainLevel");
     }
 }

@@ -32,7 +32,6 @@ public class StartMission : MonoBehaviour
      IEnumerator PlayerRespown(float time)
         {
          yield return new WaitForSeconds(time);
-        gameMasterControl.Pause();
-        Camera.m_Follow = GameObject.FindGameObjectWithTag("Player").transform; 
+         Camera.m_Follow = GameObject.FindGameObjectWithTag("Player").transform; 
         }
 }
