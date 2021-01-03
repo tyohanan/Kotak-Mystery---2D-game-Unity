@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100440556324593952}
   - component: {fileID: 2100440556324593955}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 2100440556734272035}
   - component: {fileID: 2100440556734272032}
   - component: {fileID: 2100440556734272044}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Start Mission
   m_TagString: Untagged
   m_Icon: {fileID: 0}

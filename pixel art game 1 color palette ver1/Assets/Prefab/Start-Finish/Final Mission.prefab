@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1118736782119566779}
   - component: {fileID: 1118736782119566778}
   - component: {fileID: 1118736782119566757}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Final Mission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,11 @@ MonoBehaviour:
   moveSpeed: 0.01
   destroyEffect: {fileID: 8665963225452822460, guid: fc58cefe27048134fb8bf0ec8b20c4be,
     type: 3}
+  boxCollideSize: {x: 0, y: 0}
+  radiusCheck: 5
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1118736782119566757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,7 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1118736783473503531}
   - component: {fileID: 1118736783473503530}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

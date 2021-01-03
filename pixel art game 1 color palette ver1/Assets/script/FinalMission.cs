@@ -11,10 +11,9 @@ public class FinalMission : MonoBehaviour
     public float distance = 1f;
     public float moveSpeed = 1f;
     public GameObject destroyEffect;
-    public Vector2 boxCollideSize;
     private int direction;
     private float newtest;
-    public float radiusCheck = 5f;
+    public float radiusCheck = 0.5f;
     public LayerMask whatIsPlayer;
     private bool isDestroyed;
 
@@ -58,7 +57,12 @@ public class FinalMission : MonoBehaviour
 
     IEnumerator NextLevel(float time){
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene("Level 2");
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        if ((currentScene+1) > 3)
+        {
+            currentScene = -1;
+        }
+        SceneManager.LoadScene(currentScene+1);
     }
 
     private void OnDrawGizmos()

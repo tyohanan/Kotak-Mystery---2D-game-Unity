@@ -5,7 +5,6 @@ using UnityEngine;
 public class platform : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private bool positionTouch;
 
 
 
@@ -24,7 +23,6 @@ public class platform : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         activePlatform.SetActive(true);
         nonActivePlatform.SetActive(false);
-        positionTouch = false;
         facingDirection = new Vector2(1,1);
         StartPositionMoving = transform.position;
     }
@@ -34,23 +32,18 @@ public class platform : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D player) {
-        if (player.gameObject.tag == "Player" && positionTouch == false){
+        if (player.gameObject.tag == "Player")
+        {
             activePlatform.SetActive(false);
             nonActivePlatform.SetActive(true);
-            positionTouch = true;
-        }
-        else if (player.gameObject.tag == "Player" && positionTouch == true){
-            activePlatform.SetActive(true);
-            nonActivePlatform.SetActive(false);
-            positionTouch = false;
-        }
-        if (player.gameObject.tag == "Player"){
             player.collider.transform.SetParent(transform);
         }
     }
 
     private void OnCollisionExit2D(Collision2D player) {
         if (player.gameObject.tag == "Player"){
+            activePlatform.SetActive(true);
+            nonActivePlatform.SetActive(false);
             player.collider.transform.SetParent(null);
         }
     }
