@@ -120,11 +120,10 @@ MonoBehaviour:
   moveSpeed: 0.01
   destroyEffect: {fileID: 8665963225452822460, guid: fc58cefe27048134fb8bf0ec8b20c4be,
     type: 3}
-  boxCollideSize: {x: 0, y: 0}
-  radiusCheck: 5
+  radiusCheck: 0.5
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
 --- !u!61 &1118736782119566757
 BoxCollider2D:
   m_ObjectHideFlags: 0

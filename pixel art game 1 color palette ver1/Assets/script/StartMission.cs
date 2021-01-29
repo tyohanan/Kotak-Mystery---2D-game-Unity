@@ -21,8 +21,6 @@ public class StartMission : MonoBehaviour
         IfPlayerDie();
     }
 
-
-
     public void IfPlayerDie()
     {
         if (GameObject.FindGameObjectWithTag("Player") == null)
